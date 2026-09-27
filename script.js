@@ -54,6 +54,7 @@ function initHeroMagicSlider() {
     flip.style.width = `${thumbRect.width}px`;
     flip.style.height = `${thumbRect.height}px`;
     flip.style.backgroundImage = `url("${slideUrls[nextIndex]}")`;
+    flip.style.backgroundPosition = slides[nextIndex].style.backgroundPosition;
     stage.appendChild(flip);
 
     // Force layout before animating dimensions.

@@ -201,8 +201,8 @@ em {
     inset: 0 0 auto 0;
     z-index: 100;
     padding: 1.25rem 0;
-    background: transparent;
-    border-bottom: 1px solid rgba(243, 236, 227, 0.06);
+    background: #f2f2f2;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     transition:
         background 0.4s ease,
         padding 0.4s ease,
@@ -210,10 +210,33 @@ em {
 }
 
 .site-header.is-scrolled {
-    background: rgba(15, 13, 16, 0.92);
-    backdrop-filter: blur(14px);
     padding: 0.7rem 0;
-    border-bottom-color: rgba(243, 236, 227, 0.12);
+    background: var(--primary);
+    border-bottom-color: rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+}
+
+.site-header.is-scrolled .site-nav__link {
+    color: #fff;
+}
+
+.site-header.is-scrolled .site-nav__link:hover,
+.site-header.is-scrolled .site-nav__link:focus-visible {
+    background: #fff;
+    color: var(--primary);
+}
+
+.site-header.is-scrolled .site-header__logo {
+    filter: invert(1) grayscale(1) brightness(1.8);
+    mix-blend-mode: screen;
+}
+
+.site-header.is-scrolled .mobile-nav__bar {
+    background: #fff;
+}
+
+.site-header.is-scrolled .mobile-nav__toggle.is-open .mobile-nav__bar {
+    background: #2f2f2f;
 }
 
 .site-header__progress {
@@ -281,51 +304,28 @@ em {
 
 .site-nav__list {
     display: flex;
-    gap: 2.5rem;
+    gap: 1rem;
 }
 
 .site-nav__link {
-    font-size: 0.72rem;
+    font-size: 0.9rem;
     letter-spacing: 0.22em;
     text-transform: uppercase;
     text-decoration: none;
-    color: #f3ece3;
+    color: #000000;
     position: relative;
-    padding: 0.4rem 0;
-    transition: color 0.3s ease;
+    padding: 0.6rem 1rem;
+    transition:
+        color 0.3s ease,
+        background 0.3s ease;
     display: inline-flex;
     align-items: baseline;
-    gap: 0.55rem;
-}
-
-.site-nav__link span {
-    font-family: "Cormorant Garamond", serif;
-    font-style: italic;
-    color: var(--accent);
-    font-size: 0.85rem;
-    letter-spacing: 0;
-    transition: color 0.3s ease;
-}
-
-.site-nav__link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 1px;
-    background: var(--accent);
-    transition: width 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
 .site-nav__link:hover,
 .site-nav__link:focus-visible {
-    color: var(--accent);
-}
-
-.site-nav__link:hover::after,
-.site-nav__link:focus-visible::after {
-    width: 100%;
+    background: var(--primary);
+    color: #fff;
 }
 
 .site-header__cta {
@@ -345,12 +345,8 @@ em {
     height: auto;
     display: block;
     object-fit: contain;
-    filter: brightness(0) invert(1);
+    mix-blend-mode: multiply;
     transition: filter 0.4s ease;
-}
-
-.site-header.is-scrolled .site-header__logo {
-    filter: brightness(0) invert(1);
 }
 
 /* ============================================================
@@ -375,7 +371,7 @@ em {
     display: block;
     width: 100%;
     height: 1px;
-    background: #f3ece3;
+    background: #2f2f2f;
     transition:
         transform 0.3s ease,
         opacity 0.3s ease,
@@ -423,7 +419,7 @@ em {
     right: 0;
     height: 100vh;
     width: min(420px, 92vw);
-    background: #16131a;
+    background: #f2f2f2;
     padding: 6rem 3rem 3rem;
     transform: translateX(100%);
     transition: transform 0.55s cubic-bezier(0.2, 0.7, 0.2, 1);
@@ -431,7 +427,7 @@ em {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    border-left: 1px solid rgba(243, 236, 227, 0.08);
+    border-left: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .mobile-nav__menu.is-open {
@@ -448,23 +444,19 @@ em {
     font-family: "Playfair Display", serif;
     font-size: 1.85rem;
     text-decoration: none;
-    color: #f3ece3;
-    transition: color 0.3s ease;
+    color: #2f2f2f;
+    padding: 0.4rem 1rem;
+    transition:
+        color 0.3s ease,
+        background 0.3s ease;
     display: inline-flex;
     align-items: baseline;
-    gap: 1rem;
-}
-
-.mobile-nav__link em {
-    font-family: "Cormorant Garamond", serif;
-    font-style: italic;
-    font-size: 0.9rem;
-    color: var(--accent);
 }
 
 .mobile-nav__link:hover,
 .mobile-nav__link:focus-visible {
-    color: var(--accent);
+    background: var(--primary);
+    color: #fff;
 }
 
 .mobile-nav__cta {
@@ -508,39 +500,35 @@ em {
     pointer-events: auto;
 }
 
-.hero__veil {
+.hero .hero__inner {
     position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(15, 13, 16, 0.85) 0%, rgba(15, 13, 16, 0.5) 40%, rgba(15, 13, 16, 0.05) 75%);
-    pointer-events: none;
-    z-index: 1;
-}
-
-.hero__inner {
-    position: relative;
+    bottom: 2.5rem;
+    left: 50%;
     z-index: 2;
     display: grid;
     justify-items: center;
-    text-align: center;
     gap: 1rem;
-    padding-top: 9rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    width: 100%;
+    width: max-content;
+    max-width: calc(100% - 2rem);
+    margin: 0;
+    padding: 2rem 2.5rem;
+    text-align: center;
+    transform: translateX(-50%);
+    background: rgba(15, 13, 16, 0.58);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--accent);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
-
 .hero__title {
+    margin: 0;
     color: white;
-     font-family: "Cormorant Infant", sans-serif;
-    font-size: 3rem;
+    font-family: "Cormorant Infant", sans-serif;
+    font-size: clamp(2.5rem, 2.2rem + 1.5vw, 4rem);
     font-weight: 300;
     line-height: 1.2;
     text-align: center;
-    text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55);
-    width: 100%;
-    max-width: none;
-    white-space: nowrap;
 }
 
 .hero__title span {
@@ -551,12 +539,14 @@ em {
     position: relative;
 }
 
-.hero__foot {
-    display: none;
-}
-
-.hero__lede {
-    display: none;
+.hero__subtitle {
+    max-width: 28rem;
+    margin: 0;
+    color: #f3ece3;
+    font-family: "Cormorant Infant", serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.5;
 }
 
 .hero__actions {
@@ -625,7 +615,7 @@ em {
     transform: translateX(40px);
 }
 
-/* Only three thumbs are ever visible â€” the last one in the DOM is the
+/* Only two thumbs are ever visible. The last one in the DOM is the
    currently-active slide, parked off-screen until it cycles back. */
 .hero__thumbs .hero__thumb:last-child {
     display: none;
@@ -759,7 +749,7 @@ em {
 .about__content {
     display: flex;
     flex-direction: column;
-    gap: 1.75rem;
+    gap: 1rem;
     justify-content: center;
 }
 
@@ -1217,7 +1207,7 @@ em {
     align-items: center;
     justify-content: center;
     color: #f3ece3;
-    background: url('images/banner-kitchen.webp') center center / cover no-repeat fixed;
+    background: url('https://ik.imagekit.io/sixtydeucedesign/aubrey_repo/Applainces/Heros/iStock-1398692674.webp?updatedAt=1790281526473') center center / cover no-repeat fixed;
 }
 
 .banner__overlay {
@@ -1882,6 +1872,20 @@ select.form-field__input {
    Breakpoints: 1024px / 768px / 475px / 375px / 320px
    ============================================================ */
 
+@media (max-width: 1600px) {
+    .hero__thumb {
+        width: 150px;
+        height: 114px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .hero__thumb {
+        width: 120px;
+        height: 90px;
+    }
+}
+
 @media (max-width: 1200px) {
     .card-slider__card {
         flex: 0 0 calc((100% - 4rem) / 3);
@@ -2004,6 +2008,10 @@ select.form-field__input {
         bottom: 2rem;
     }
 
+    .hero .hero__inner {
+        bottom: 2rem;
+    }
+
     .tabs__list {
         flex-wrap: wrap;
     }
@@ -2027,19 +2035,13 @@ select.form-field__input {
         font-size: 1rem;
     }
 
-    .hero__inner {
-        padding-top: 6rem;
-        padding-bottom: 8rem;
-        gap: 2rem;
+    .hero .hero__inner {
+        bottom: calc(68px + 2.5rem);
+        padding: 1.5rem;
     }
 
-    .hero__foot {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .hero__lede {
-        max-width: none;
+    .hero__subtitle {
+        font-size: 1.1rem;
     }
 
     .hero__actions {
@@ -2231,10 +2233,6 @@ select.form-field__input {
     .btn {
         padding: 0.95rem 1.5rem;
         font-size: 0.7rem;
-    }
-
-    .hero__lede {
-        padding-left: 1rem;
     }
 
     .review-carousel__btn {
