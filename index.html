@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Maison Ferré — A curated atelier of luxury home appliances. Bespoke kitchen, laundry, and refrigeration suites for the discerning home." />
+    <title>Biltmore Appliances — Bespoke Luxury Home Appliances</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- ============== HEADER ============== -->
+    <header class="site-header" id="site-header">
+        <div class="site-header__progress" aria-hidden="true"></div>
+        <div class="container site-header__inner">
+            <a href="#" class="site-header__brand" aria-label="Biltmore Appliance home">
+                <img src="images/biltmore-logo.jpg" alt="Biltmore Appliance" class="site-header__logo" />
+            </a>
+
+            <nav class="site-nav" aria-label="Primary">
+                <ul class="site-nav__list">
+                    <li><a class="site-nav__link" href="#collection"><span>01</span> Collection</a></li>
+                    <li><a class="site-nav__link" href="#about"><span>02</span> Atelier</a></li>
+                    <li><a class="site-nav__link" href="#services"><span>03</span> Services</a></li>
+                    <li><a class="site-nav__link" href="#showroom"><span>04</span> Showroom</a></li>
+                    <li><a class="site-nav__link" href="#faq"><span>05</span> Enquiry</a></li>
+                </ul>
+            </nav>
+
+            <a href="#contact" class="btn btn--primary site-header__cta">Private Consultation</a>
+
+            <div class="mobile-nav">
+                <button type="button" class="mobile-nav__toggle" aria-expanded="false" aria-label="Open menu"
+                    aria-controls="mobile-menu">
+                    <span class="mobile-nav__bar"></span>
+                    <span class="mobile-nav__bar"></span>
+                    <span class="mobile-nav__bar"></span>
+                </button>
+                <div class="mobile-nav__overlay" aria-hidden="true"></div>
+                <nav id="mobile-menu" class="mobile-nav__menu" aria-label="Mobile primary">
+                    <ul class="mobile-nav__list">
+                        <li><a class="mobile-nav__link" href="#collection"><em>01</em> Collection</a></li>
+                        <li><a class="mobile-nav__link" href="#about"><em>02</em> Atelier</a></li>
+                        <li><a class="mobile-nav__link" href="#services"><em>03</em> Services</a></li>
+                        <li><a class="mobile-nav__link" href="#showroom"><em>04</em> Showroom</a></li>
+                        <li><a class="mobile-nav__link" href="#testimonials"><em>05</em> Clients</a></li>
+                        <li><a class="mobile-nav__link" href="#faq"><em>06</em> Enquiry</a></li>
+                    </ul>
+                    <a href="#contact" class="btn btn--primary mobile-nav__cta">Private Consultation</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- ============== HERO (magic-slider thumbnails) ============== -->
+        <section class="hero hero--magic" aria-label="Featured collections">
+            <div class="hero__stage" aria-live="polite">
+                <figure class="hero__slide is-active" data-slide="0"
+                    style="background-image: url('images/hero-stove.webp');">
+                </figure>
+                <figure class="hero__slide" data-slide="1"
+                    style="background-image: url('images/hero-fridge.webp'); background-position: 80% center;">
+                </figure>
+                <figure class="hero__slide" data-slide="2"
+                    style="background-image: url('images/hero-dishwasher.webp');">
+                </figure>
+                <figure class="hero__slide" data-slide="3" style="background-image: url('images/hero-laundry.webp');">
+                </figure>
+            </div>
+
+            <div class="hero__veil" aria-hidden="true"></div>
+
+            <div class="container hero__inner">
+                <h1 class="hero__title" data-hero-title>
+                    <span>Biltmore Appliances for <br>your <span class="hero__title-mark">home</span></span>
+                </h1>
+
+                <div class="hero__foot">
+                    <p class="hero__lede" data-hero-lede>
+                        A curated selection of ultra-premium kitchen, refrigeration, and laundry suites—beautifully
+                        integrated into your living space.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Thumbnail strip — click to grow into the hero -->
+            <div class="hero__thumbs" role="tablist" aria-label="Hero collection thumbnails">
+                <button type="button" class="hero__thumb is-active" role="tab" aria-selected="true" data-thumb="0">
+                    <img src="images/hero-stove.webp" alt="The Ferré 48 hand-forged range" />
+                </button>
+                <button type="button" class="hero__thumb" role="tab" aria-selected="false" data-thumb="1">
+                    <img src="images/hero-fridge.webp" alt="The Cortina 36 induction range" />
+                </button>
+                <button type="button" class="hero__thumb" role="tab" aria-selected="false" data-thumb="2">
+                    <img src="images/hero-dishwasher.webp" alt="A panel-ready Bosch dishwasher" />
+                </button>
+                <button type="button" class="hero__thumb" role="tab" aria-selected="false" data-thumb="3">
+                    <img src="images/hero-laundry.webp" alt="The Aria laundry suite" />
+                </button>
+            </div>
+
+            <span class="hero__scroll" aria-hidden="true">
+                <span class="hero__scroll-line"></span>Scroll
+            </span>
+        </section>
+
+        <!-- ============== MARQUEE / TICKER ============== -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee__track">
+                <span class="marquee__group">
+                    <span>ULTRA-PREMIUM APPLIANCES</span><i>·</i><span>SEAMLESS DESIGN</span><i>·</i>
+                    <span>ARCHITECTURAL KITCHENS</span><i>·</i><span>BUILT-IN COMFORT</span><i>·</i>
+                    <span>LUXURY LIVING</span><i>·</i><span>EXPERT CRAFTSMANSHIP</span><i>·</i>
+                    <span>BESPOKE SPACES</span><i>·</i><span>DESIGNER SHOWROOM</span><i>·</i>
+                </span>
+                <span class="marquee__group">
+                    <span>ULTRA-PREMIUM APPLIANCES</span><i>·</i><span>SEAMLESS DESIGN</span><i>·</i>
+                    <span>ARCHITECTURAL KITCHENS</span><i>·</i><span>BUILT-IN COMFORT</span><i>·</i>
+                    <span>LUXURY LIVING</span><i>·</i><span>EXPERT CRAFTSMANSHIP</span><i>·</i>
+                    <span>BESPOKE SPACES</span><i>·</i><span>DESIGNER SHOWROOM</span><i>·</i>
+                </span>
+            </div>
+        </div>
+
+        <!-- ============== ABOUT (editorial split + parallax) ============== -->
+        <section class="about" id="about" aria-labelledby="about-title">
+            <div class="container about__grid">
+
+                <div class="about__content">
+                    <h2 class="about__title" id="about-title" data-reveal>
+                        The Standards We Keep
+                    </h2>
+                    <p class="about__subtitle" data-reveal>A Commitment to Details</p>
+                    <p class="about__lede" data-reveal>
+                        We partner with homeowners and designers to bring the world’s finest architectural appliances
+                        into modern living spaces. Our focus centers on impeccable technical integration, enduring
+                        performance, and a shared appreciation for beautiful, functional design.
+                    </p>
+
+                    <div class="about__process" data-reveal data-about-process>
+                        <div class="about__process-steps" role="tablist" aria-label="Our four-chapter process">
+                            <button type="button" class="about__step is-active" role="tab" aria-selected="true"
+                                tabindex="0" data-step="consult" data-step-duration=""
+                                data-step-title="CLIENT CONSULTATION"
+                                data-step-copy="Every great project starts with an open conversation. We sit down with you to study your floor plans, learn how you cook and live, and help guide you toward the ideal appliance configurations for your daily lifestyle and culinary needs."
+                                data-step-image="images/about-consult.webp"
+                                data-step-image-alt="Client consultation in the Maison Ferré atelier">
+                                <span class="about__step-num">I.</span>
+                                <span class="about__step-label">Consult</span>
+                            </button>
+                            <button type="button" class="about__step" role="tab" aria-selected="false" tabindex="-1"
+                                data-step="design" data-step-duration="" data-step-title="TECHNICAL SPECIFICATION"
+                                data-step-copy="True luxury lies in the details. We collaborate closely with your cabinet makers and contractors, reviewing dimensions down to the exact millimeter to guarantee that every panel-ready unit and built-in range integrates completely flush."
+                                data-step-image="images/about-design.webp"
+                                data-step-image-alt="Technical drawings and design specifications">
+                                <span class="about__step-num">II.</span>
+                                <span class="about__step-label">Design</span>
+                            </button>
+                            <button type="button" class="about__step" role="tab" aria-selected="false" tabindex="-1"
+                                data-step="forge" data-step-duration="" data-step-title="CUSTOM CURATION"
+                                data-step-copy="We oversee the sourcing and preparation of your entire appliance suite. From hand-selecting unique finishes to coordinating custom trim details, we ensure every individual piece arriving at your home meets our strict premium standards."
+                                data-step-image="images/about-forge.webp"
+                                data-step-image-alt="Hand-forged appliance components in the Milano atelier">
+                                <span class="about__step-num">III.</span>
+                                <span class="about__step-label">Forge</span>
+                            </button>
+                            <button type="button" class="about__step" role="tab" aria-selected="false" tabindex="-1"
+                                data-step="install" data-step-duration="" data-step-title="PRECISION INSTALLATION"
+                                data-step-copy="Our specialized team manages the final transport, unboxing, and structural setup. We level every unit, calibrate the connections, and double-check every reveal so your kitchen operates beautifully and flawlessly from the very first day."
+                                data-step-image="images/about-install.webp"
+                                data-step-image-alt="Completed precision installation in client home">
+                                <span class="about__step-num">IV.</span>
+                                <span class="about__step-label">Install</span>
+                            </button>
+                        </div>
+
+                        <div class="about__process-detail" aria-live="polite">
+                            <h3 class="about__process-title" data-process-title>Designer Consultation</h3>
+                            <p class="about__process-copy" data-process-copy>
+                                A private conversation in your home or at our Milano atelier. Finishes,
+                                dimensions, and integration are specified — by hand — alongside your design lead.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <figure class="about__media" data-reveal>
+                    <div class="about__media-frame">
+                        <img src="images/about-consult.webp" alt="Client consultation in the Maison Ferré atelier"
+                            data-parallax data-parallax-speed="0.18" data-about-image
+                            class="about__image about__image--primary" />
+                    </div>
+                </figure>
+            </div>
+        </section>
+
+        <!-- ============== MATERIALS (palette swatches) ============== -->
+        <section class="materials" id="materials" aria-labelledby="materials-title" data-materials>
+            <div class="container materials__grid">
+                <header class="materials__header">
+                    <h2 class="materials__title" id="materials-title" data-reveal>
+                        Texture Defined
+                    </h2>
+                    <p class="materials__subtitle" data-reveal>The Elements of Design</p>
+                    <p class="materials__lede" data-reveal>
+                        We curate environments where precision engineering meets organic texture. By balancing
+                        high-performance mechanics with raw, natural finishes, we transform your culinary space into a
+                        cohesive work of art.
+                    </p>
+                </header>
+
+                <div class="materials__display" data-reveal>
+                    <figure class="materials__feature">
+                        <div class="materials__feature-frame">
+                            <img class="materials__feature-image" data-material-image src="images/materials-brass.webp"
+                                alt="Polished forged brass surface with warm tonal variation" />
+                        </div>
+                        <figcaption class="materials__feature-info">
+                            <h3 class="materials__feature-name" data-material-name>SOLID BRASS</h3>
+                            <p class="materials__feature-copy" data-material-copy>
+                                Precision-engineered hardware and custom metallic accents designed to contrast against
+                                high-performance suites, transforming functional dials and trim into striking design
+                                statements.
+                            </p>
+                        </figcaption>
+                    </figure>
+
+                    <ul class="materials__swatches" role="tablist" aria-label="Material palette">
+                        <li>
+                            <button type="button" class="materials__swatch is-active" role="tab" aria-selected="true"
+                                tabindex="0" data-material="brass" data-material-name="SOLID BRASS"
+                                data-material-copy="Precision-engineered hardware and custom metallic accents designed to contrast against high-performance suites, transforming functional dials and trim into striking design statements."
+                                data-material-image="images/materials-brass.webp"
+                                data-material-image-alt="Polished forged brass surface with warm tonal variation">
+                                <span class="materials__swatch-chip materials__swatch-chip--brass"
+                                    aria-hidden="true"></span>
+                                <span class="materials__swatch-meta">
+                                    <span class="materials__swatch-label">Brass</span>
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="materials__swatch" role="tab" aria-selected="false"
+                                tabindex="-1" data-material="walnut" data-material-name="Smoked Walnut"
+                                data-material-copy="Warm, architectural millwork tailored for seamless panel integration, expertly cladding luxury refrigeration configurations to let heavy utility disappear into custom cabinetry."
+                                data-material-image="images/materials-walnut.webp"
+                                data-material-image-alt="Smoked walnut wood grain detail">
+                                <span class="materials__swatch-chip materials__swatch-chip--walnut"
+                                    aria-hidden="true"></span>
+                                <span class="materials__swatch-meta">
+                                    <span class="materials__swatch-label">Walnut</span>
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="materials__swatch" role="tab" aria-selected="false"
+                                tabindex="-1" data-material="marble" data-material-name="Calacatta Marble"
+                                data-material-copy="Sculptural, continuous stone surfaces engineered to frame professional-grade dual-fuel ranges and flush-mounted cooktops, balancing grand architecture with precision utility."
+                                data-material-image="images/materials-marble.webp"
+                                data-material-image-alt="White Calacatta marble surface with delicate veining">
+                                <span class="materials__swatch-chip materials__swatch-chip--marble"
+                                    aria-hidden="true"></span>
+                                <span class="materials__swatch-meta">
+                                    <span class="materials__swatch-label">Marble</span>
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="materials__swatch" role="tab" aria-selected="false"
+                                tabindex="-1" data-material="slate" data-material-name="MATTE BLACK"
+                                data-material-copy="Deep, light-absorbing appliance configurations and dark-honed architectural panels that ground the contemporary cooking zone with a sleek, minimalist intensity."
+                                data-material-image="images/materials-matte.webp"
+                                data-material-image-alt="Honed dark slate stone surface detail">
+                                <span class="materials__swatch-chip materials__swatch-chip--leather"
+                                    aria-hidden="true"></span>
+                                <span class="materials__swatch-meta">
+                                    <span class="materials__swatch-label">Matte</span>
+                                </span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== COLLECTION (2x2 grid) ============== -->
+        <section class="collection" id="collection" aria-labelledby="collection-title">
+            <div class="container">
+                <header class="collection__header">
+                    <h2 class="collection__title" id="collection-title" data-reveal>
+                        OUR BRAND COLLECTION
+                    </h2>
+                    <p class="collection__subtitle" data-reveal>Icons of Culinary Design</p>
+                    <p class="collection__lede" data-reveal>
+                        A curated showcase of the world’s finest culinary and preservation craftsmanship. We provide
+                        precision alignment and immaculate custom integration for four premier luxury brands.
+                    </p>
+                </header>
+
+                <ul class="collection__grid" data-collection-grid>
+                    <li class="collection__item" data-reveal>
+                        <figure class="collection__media">
+                            <img src="images/collection-wolf.webp"
+                                alt="The Ferré 48 — hand-forged dual-fuel range in brushed brass" />
+                        </figure>
+                        <div class="collection__body">
+                            <h3 class="collection__name">Wolf Dual-Fuel Range</h3>
+                            <p class="collection__meta">A professional-grade freestanding range featuring iconic control
+                                knobs, precision gas burners, and a high-capacity electric dual convection oven.</p>
+                            <p class="collection__price">From $12,000</p>
+                        </div>
+                    </li>
+                    <li class="collection__item" data-reveal>
+                        <figure class="collection__media">
+                            <img src="images/collection-bocsh.webp"
+                                alt="The Sienna column refrigerator with walnut veneer" />
+                        </figure>
+                        <div class="collection__body">
+                            <h3 class="collection__name">Bosch Built-In Refrigerator</h3>
+                            <p class="collection__meta">A sleek, custom-integrated French door refrigerator designed to
+                                sit completely flush with your kitchen cabinetry for a seamless finish.</p>
+                            <p class="collection__price">From $7,599</p>
+                        </div>
+                    </li>
+                    <li class="collection__item" data-reveal>
+                        <figure class="collection__media">
+                            <img src="images/collection-thermador.webp"
+                                alt="The Aria laundry suite in champagne bronze" />
+                        </figure>
+                        <div class="collection__body">
+                            <h3 class="collection__name">Thermador Custom-Panel Dishwasher</h3>
+                            <p class="collection__meta">A whisper-quiet built-in dishwasher hidden behind a custom
+                                cabinet panel, featuring a signature blue interior glow when opened.</p>
+                            <p class="collection__price">From $1,999</p>
+                        </div>
+                    </li>
+                    <li class="collection__item" data-reveal>
+                        <figure class="collection__media">
+                            <img src="images/collection-miele.webp" alt="The Cellier 240 wine vault" />
+                        </figure>
+                        <div class="collection__body">
+                            <h3 class="collection__name">Miele Front-Load Laundry Suite</h3>
+                            <p class="collection__meta">An energy-efficient, stacked or side-by-side washer and dryer
+                                pair engineered with precision fabric care and integrated cabinet styling.</p>
+                            <p class="collection__price">From $3,898</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ============== PARALLAX QUOTE BANNER ============== -->
+        <section class="banner" id="founder-quote" aria-labelledby="banner-title" role="region"
+            aria-label="Founder quote banner">
+            <div class="banner__overlay" aria-hidden="true"></div>
+            <div class="container banner__inner">
+                <figure class="banner__figure" aria-describedby="banner-desc">
+                    <blockquote class="banner__quote" data-reveal>
+                        <h2 id="banner-title">
+                            <span class="visually-hidden">Quote:</span>
+                            "From the laundry room to the kitchen we build appliances for the demands of your daily
+                            routine."
+                        </h2>
+                    </blockquote>
+                </figure>
+            </div>
+        </section>
+
+        <!-- ============== SERVICES ============== -->
+        <section class="services" id="services" aria-labelledby="services-title">
+            <div class="container">
+                <header class="services__header services__header--split">
+                    <div class="services__header-lead">
+                        <h2 class="services__header-title" id="services-title" data-reveal>
+                            THE BILTMORE STANDARD
+                        </h2>
+                        <p class="services__subtitle" data-reveal>A seamless journey from initial concept to the final,
+                            finished space</p>
+                        <p class="services__header-lede" data-reveal>
+                            Excellence defined by precision, quiet performance, and thoughtful care—ensuring every
+                            choice enhances the harmony of your home.
+                        </p>
+                    </div>
+                </header>
+
+                <ol class="services__list">
+                    <li class="service" data-reveal>
+                        <span class="service__num">I.</span>
+                        <div class="service__body">
+                            <h3 class="service__title">PERSONAL CONSULTATION</h3>
+                            <p class="service__copy">
+                                A private session—in your home or our studio—to refine the specific dimensions,
+                                finishes, and integration requirements of your space.
+                            </p>
+                        </div>
+                        <span class="service__hint" aria-hidden="true">On-Site Or At Our Studio</span>
+                    </li>
+                    <li class="service" data-reveal>
+                        <span class="service__num">II.</span>
+                        <div class="service__body">
+                            <h3 class="service__title">CUSTOM CURATION</h3>
+                            <p class="service__copy">
+                                Each piece is tailored to your vision, with hand-selected materials and finishes. Every
+                                selection is documented and archived for your records.
+                            </p>
+                        </div>
+                        <span class="service__hint" aria-hidden="true">Tailored To Your Timeline</span>
+                    </li>
+                    <li class="service" data-reveal>
+                        <span class="service__num">III.</span>
+                        <div class="service__body">
+                            <h3 class="service__title">WHITE-GLOVE INSTALLATION</h3>
+                            <p class="service__copy">
+                                Crated by hand and managed by our specialist team, ensuring the transition into your
+                                home is flawless, silent, and complete.
+                            </p>
+                        </div>
+                        <span class="service__hint" aria-hidden="true">A Seamless Transition</span>
+                    </li>
+                    <li class="service" data-reveal>
+                        <span class="service__num">IV.</span>
+                        <div class="service__body">
+                            <h3 class="service__title">LIFETIME CARE</h3>
+                            <p class="service__copy">
+                                A direct line to our senior technical team, ensuring your appliances remain in perfect
+                                harmony with your home for years to come.
+                            </p>
+                        </div>
+                        <span class="service__hint" aria-hidden="true">A Lasting Commitment</span>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ============== TESTIMONIALS (semantic, BEM, WCAG) ============== -->
+        <section id="testimonials" class="reviews-section">
+            <div class="container">
+                <header class="reviews__header">
+                    <h2 class="reviews-title">What Our Clients Say</h2>
+                    <p class="subtitle reviews-subtitle">Voices from Our Clientele</p>
+                </header>
+
+                <div class="reviews-slider" id="reviewsSlider">
+                    <div class="reviews-track" id="reviewsTrack">
+
+                        <article class="review-card">
+                            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <blockquote class="review-text">"The attention to detail during the initial consultation changed how I viewed my entire kitchen layout."</blockquote>
+                            <footer class="review-author">
+                                <cite class="review-name">Katherine V.</cite>
+                                <p class="review-service">Residential Architect</p>
+                            </footer>
+                        </article>
+
+                        <article class="review-card">
+                            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <blockquote class="review-text">"A seamless transition from start to finish. I haven't experienced service this quiet and professional in years."</blockquote>
+                            <footer class="review-author">
+                                <cite class="review-name">James T.</cite>
+                                <p class="review-service">Homeowner</p>
+                            </footer>
+                        </article>
+
+                        <article class="review-card">
+                            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <blockquote class="review-text">"The customization process was effortless. Every finish, every dimension—exactly as we imagined."</blockquote>
+                            <footer class="review-author">
+                                <cite class="review-name">Sarah & Julian V.</cite>
+                                <p class="review-service">Private Clients</p>
+                            </footer>
+                        </article>
+
+                        <article class="review-card">
+                            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <blockquote class="review-text">"The technical precision of the installation was unmatched. They handled the complex requirements of our space with complete ease."</blockquote>
+                            <footer class="review-author">
+                                <cite class="review-name">Robert W.</cite>
+                                <p class="review-service">Luxury Property Developer</p>
+                            </footer>
+                        </article>
+
+                        <article class="review-card">
+                            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <blockquote class="review-text">"Finally, a team that values precision as much as I do. The Biltmore standard is real."</blockquote>
+                            <footer class="review-author">
+                                <cite class="review-name">Clara M.</cite>
+                                <p class="review-service">Interior Designer</p>
+                            </footer>
+                        </article>
+
+                        <article class="review-card">
+                            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <blockquote class="review-text">"From the first meeting to the final walkthrough, everything was handled with absolute care."</blockquote>
+                            <footer class="review-author">
+                                <cite class="review-name">William C.</cite>
+                                <p class="review-service">Boutique Hotel Owner</p>
+                            </footer>
+                        </article>
+
+                        <article class="review-card">
+                            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <blockquote class="review-text">"The Biltmore process is remarkably quiet—an essential quality for those who appreciate true luxury."</blockquote>
+                            <footer class="review-author">
+                                <cite class="review-name">Julian S.</cite>
+                                <p class="review-service">Architectural Firm Partner</p>
+                            </footer>
+                        </article>
+
+                        <article class="review-card">
+                            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <blockquote class="review-text">"Every installation detail was handled with a level of care I haven't encountered elsewhere."</blockquote>
+                            <footer class="review-author">
+                                <cite class="review-name">Elena P.</cite>
+                                <p class="review-service">Design Consultant</p>
+                            </footer>
+                        </article>
+
+                        <article class="review-card">
+                            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <blockquote class="review-text">"To find a team that understands the nuance of a home as much as the mechanics of an appliance is rare."</blockquote>
+                            <footer class="review-author">
+                                <cite class="review-name">Marcus & Clara D.</cite>
+                                <p class="review-service">Homeowners</p>
+                            </footer>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="review-controls">
+                    <button class="review-btn review-prev" id="reviewPrev">&#10094;</button>
+                    <div class="review-dots" id="reviewDots"></div>
+                    <button class="review-btn review-next" id="reviewNext">&#10095;</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== FAQ (accordion) ============== -->
+        <section class="faq" id="faq" aria-labelledby="faq-title">
+            <div class="container faq__grid">
+                <aside class="faq__aside">
+                    <h2 class="faq__title" id="faq-title" data-reveal>
+                       Frequently Asked Questions
+                    </h2>
+                    <p class="faq__subtitle" data-reveal>Everything you need to know</p>
+                    <p class="faq__lede" data-reveal>
+                       We believe in complete transparency. Below are the common questions regarding our process and how we ensure precision in every project.
+                    </p>
+                </aside>
+
+                <ul class="faq__list" data-reveal>
+                    <li class="faq__item">
+                        <h3>
+                            <button class="faq__trigger" aria-expanded="false" aria-controls="faq-1">
+                                <span class="faq__question">What sets Biltmore Appliance apart from traditional retailers?</span>
+                                <span class="faq__icon" aria-hidden="true"></span>
+                            </button>
+                        </h3>
+                        <div id="faq-1" class="faq__answer" hidden>
+                            <p>Unlike standard showrooms, we focus on the integration of luxury appliances into the architecture of your home. We bridge the gap between high-performance utility and bespoke design.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="faq__item">
+                        <h3>
+                            <button class="faq__trigger" aria-expanded="false" aria-controls="faq-2">
+                                <span class="faq__question">Do you work with trade professionals on commercial projects?</span>
+                                <span class="faq__icon" aria-hidden="true"></span>
+                            </button>
+                        </h3>
+                        <div id="faq-2" class="faq__answer" hidden>
+                            <p>Yes. We regularly partner with architects, interior designers, and property developers to ensure technical requirements and design visions are executed with precision.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="faq__item">
+                        <h3>
+                            <button class="faq__trigger" aria-expanded="false" aria-controls="faq-3">
+                                <span class="faq__question">What is the typical timeline for an installation?</span>
+                                <span class="faq__icon" aria-hidden="true"></span>
+                            </button>
+                        </h3>
+                        <div id="faq-3" class="faq__answer" hidden>
+                            <p>Because every project is tailored to the specific dimensions and finishes of your space, timelines vary. During our initial consultation, we provide a clear, transparent schedule based on your project's scope.</p>
+                        </div>
+                    </li>
+                    <li class="faq__item">
+                        <h3>
+                            <button class="faq__trigger" aria-expanded="false" aria-controls="faq-4">
+                                <span class="faq__question">Are you able to assist with custom kitchen configurations?</span>
+                                <span class="faq__icon" aria-hidden="true"></span>
+                            </button>
+                        </h3>
+                        <div id="faq-4" class="faq__answer" hidden>
+                            <p>Absolutely. We specialize in complex layouts, including flush-mount installations, custom paneling, and advanced ventilation systems that require exacting tolerances.</p>
+                        </div>
+                    </li>
+                    <li class="faq__item">
+                        <h3>
+                            <button class="faq__trigger" aria-expanded="false" aria-controls="faq-5">
+                                <span class="faq__question">How do I begin the consultation process?</span>
+                                <span class="faq__icon" aria-hidden="true"></span>
+                            </button>
+                        </h3>
+                        <div id="faq-5" class="faq__answer" hidden>
+                            <p>You can reach out through our contact page to schedule an initial discussion. We will review your project needs and determine the most effective path to achieving your goals.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ============== CONTACT ============== -->
+        <section class="contact" id="contact" aria-labelledby="contact-title">
+            <div class="container contact__grid">
+                <aside class="contact__aside" data-reveal>
+                    <h2 class="contact__title" id="contact-title">
+                        Begin a private commission.</em>
+                    </h2>
+                    <p class="contact__subtitle">Contact — Private Enquiry</p>
+                    <p class="contact__lede">
+                        Share a few details and a Biltmore Appliance design lead will reply
+                        within one business day to schedule your consultation.
+                    </p>
+                    <ul class="contact__details">
+                        <li>
+                            <span class="contact__label">Address</span>
+                            <span>1234 W. Main Street, Paradise Valley, AZ 85051</span>
+                        </li>
+                        <li>
+                            <span class="contact__label">Phone</span>
+                            <a href="">(602) 123-4567</a>
+                        </li>
+                        <li>
+                            <span class="contact__label">Email</span>
+                            <a href="">test@example.com</a>
+                        </li>
+                    </ul>
+                </aside>
+
+                <form class="contact-form" data-validate novalidate data-reveal>
+                    <div class="form-field">
+                        <label class="form-field__label" for="name">Full name</label>
+                        <input class="form-field__input" type="text" id="name" name="name" required
+                            autocomplete="name" />
+                        <span class="form-field__error" aria-live="polite"></span>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-field__label" for="email">Email</label>
+                        <input class="form-field__input" type="email" id="email" name="email" required
+                            autocomplete="email" />
+                        <span class="form-field__error" aria-live="polite"></span>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-field__label" for="phone">Phone (optional)</label>
+                        <input class="form-field__input" type="tel" id="phone" name="phone" autocomplete="tel" />
+                        <span class="form-field__error" aria-live="polite"></span>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-field__label" for="interest">Area of interest</label>
+                        <select class="form-field__input" id="interest" name="interest" required>
+                            <option value="">Please select…</option>
+                            <option>Bespoke commission</option>
+                            <option>Full kitchen suite</option>
+                            <option>Refrigeration</option>
+                            <option>Laundry</option>
+                            <option>Showroom visit</option>
+                        </select>
+                        <span class="form-field__error" aria-live="polite"></span>
+                    </div>
+                    <div class="form-field form-field--full">
+                        <label class="form-field__label" for="message">A few details</label>
+                        <textarea class="form-field__input" id="message" name="message" rows="2" required
+                            minlength="10"></textarea>
+                        <span class="form-field__error" aria-live="polite"></span>
+                    </div>
+                    <button type="submit" class="btn btn--primary contact-form__submit">Submit Enquiry</button>
+                    <p class="contact-form__success" hidden role="status">
+                        Thank you. A design lead will be in touch within one business day.
+                    </p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============== FOOTER ============== -->
+    <footer class="site-footer" aria-labelledby="footer-title">
+        <div class="container site-footer__grid">
+            <div class="site-footer__brand">
+                <img src="images/biltmore-logo.jpg" alt="Biltmore Appliance" class="site-footer__logo" id="footer-title" />
+            </div>
+            <nav class="site-footer__col" aria-label="Collection">
+                <h3 class="site-footer__heading">Collection</h3>
+                <ul>
+                    <li><a href="#collection">Ranges</a></li>
+                    <li><a href="#collection">Refrigeration</a></li>
+                    <li><a href="#collection">Laundry</a></li>
+                    <li><a href="#collection">Cellar &amp; Bar</a></li>
+                </ul>
+            </nav>
+            <nav class="site-footer__col" aria-label="Services">
+                <h3 class="site-footer__heading">Services</h3>
+                <ul>
+                    <li><a href="#services">Designer Consultation</a></li>
+                    <li><a href="#services">Bespoke Commission</a></li>
+                    <li><a href="#services">White-Glove Delivery</a></li>
+                    <li><a href="#services">Lifetime Concierge</a></li>
+                </ul>
+            </nav>
+            <nav class="site-footer__col" aria-label="Atelier">
+                <h3 class="site-footer__heading">Atelier</h3>
+                <ul>
+                    <li><a href="#about">Our Story</a></li>
+                    <li><a href="#showroom">Showroom</a></li>
+                    <li><a href="#testimonials">Clients</a></li>
+                    <li><a href="#faq">Enquiry</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container site-footer__base">
+            <p>&copy; 2026 Biltmore Appliances. All rights reserved.</p>
+            <ul class="site-footer__legal">
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Accessibility</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
